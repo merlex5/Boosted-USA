@@ -1,0 +1,132 @@
+@import '_variable.scss';
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ol {
+	counter-reset: myCounter;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.wraper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container-large {
+	max-width: 1470px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	font-weight: 400;
+	font-style: normal;
+	color: $black;
+}
+
+h1 {
+	font-size: 4.4rem;
+	line-height: 1.2;
+	font-weight: 400;
+	font-style: normal;
+	color: $black;
+}
+
+h2 {
+	font-size: 4.5rem;
+	line-height: 1.2;
+	font-weight: 700;
+	font-style: normal;
+	color: $black;
+}
+
+h3 {
+	font-size: 3.2rem;
+	line-height: 1.2;
+	font-weight: 400;
+	font-style: normal;
+	color: $black;
+}
+
+h4 {
+	font-size: 3.2rem;
+	line-height: 1.2;
+	font-weight: 700;
+	font-style: normal;
+	color: $white;
+}
+
+// .link-underline {
+// 	position: relative;
+// 	color: #000;
+// 	font-size: 1.2rem;
+// 	font-weight: 500;
+// 	cursor: pointer;
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		bottom: 0;
+// 		right: 0;
+// 		width: 0;
+// 		height: 1px;
+// 		background-color: #000;
+// 		transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+// 	}
+// }
+// @media (hover: hover) and (pointer: fine) {
+// 	.link-underline:hover::before {
+// 		left: 0;
+// 		right: auto;
+// 		width: 100%;
+// 	}
+// }

@@ -1,0 +1,80 @@
+//* Primary colors
+$black: #000;
+$white: #fff;
+$coral: #ff4a32;
+
+//* Media Queries breakpoints
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+
+//* Buttons
+@mixin button {
+	display: block;
+	width: 14em;
+	height: 2.5em;
+	color: $white;
+	border: 1px solid $coral;
+	border-radius: 2.5em;
+	line-height: 2.5em;
+	padding: 0;
+	text-align: center;
+	outline: none;
+	overflow: hidden;
+	background: linear-gradient(-45deg, $coral 40%, #ff9182 0 60%, $coral 0) right / 300% 100% no-repeat,
+		linear-gradient(-45deg, $coral 0 40%, $coral 60%, $coral 0) right / 300% 100% no-repeat;
+	&:hover {
+		background-position: left;
+		transition: 1s;
+	}
+}
+
+//* Link
+@mixin link-img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 120px;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 10px;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	color: $white;
+	& span {
+		font-size: 1.8rem;
+		margin-top: 4px;
+		text-transform: uppercase;
+	}
+	background: conic-gradient(#fff 0 90deg, #fff0 0) bottom left, conic-gradient($coral 0 90deg, #fff0 0) bottom left,
+		conic-gradient(from 90deg, #fff 0 90deg, #fff0 0) top left,
+		conic-gradient(from 90deg, $coral 0 90deg, #fff0 0) top left,
+		conic-gradient(from 180deg, #fff 0 90deg, #fff0 0) top right,
+		conic-gradient(from 180deg, $coral 0 90deg, #fff0 0) top right,
+		conic-gradient(from -90deg, #fff 0 90deg, #fff0 0) bottom right,
+		conic-gradient(from -90deg, $coral 0 90deg, #fff0 0) bottom right, $coral;
+	-webkit-background-clip: text, padding-box;
+	background-clip: text, padding-box;
+	background-size: 202% 202%;
+	padding: 12px;
+	transition: all 0.5s;
+	&:hover {
+		background-position: center;
+		& path {
+			fill: $white;
+		}
+	}
+}
+
+//* Line
+@mixin line {
+	width: 70px;
+	height: 2px;
+	background-color: #cfcfcf;
+	margin: 0 auto;
+}
